@@ -1,0 +1,93 @@
+Elevated buttons for COLUMN
+
+
+              ElevatedButton(
+                onPressed: () {},
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                    ),
+                    Image.asset("images/druid.jpg"),
+                    Text(
+                      "   DRUID",
+                      style: TextStyle(fontSize: 45, color: Colors.white, fontFamily: "Quicksand"),
+                    ),
+                  ],
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                    ),
+                    Image.asset("images/mage.jpg"),
+                    Text(
+                      "   MAGE",
+                      style: TextStyle(fontSize: 45, color: Colors.white, fontFamily: "Quicksand"),
+                    ),
+                  ],
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                    ),
+                    Image.asset("images/rogue.jpg"),
+                    Text(
+                      "   ROGUE",
+                      style: TextStyle(fontSize: 45, color: Colors.white, fontFamily: "Quicksand"),
+                    ),
+                  ],
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                    ),
+                    Image.asset("images/priest.jpg"),
+                    Text(
+                      "   PRIEST",
+                      style: TextStyle(fontSize: 45, color: Colors.white, fontFamily: "Quicksand"),
+                    ),
+                  ],
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                    ),
+                    Image.asset("images/warlock.jpg"),
+                    Text(
+                      "   WARLOCK",
+                      style: TextStyle(fontSize: 45, color: Colors.white, fontFamily: "Quicksand"),
+                    ),
+                  ],
+                ),
+              ),
+              /*ElevatedButton(
+            onPressed: () {},
+            child: Row(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                ),
+                Image.asset("images/warrior.jpg"),
+                Text(
+                  "   WARRIOR",
+                  style: TextStyle(fontSize: 45, color: Colors.white, fontFamily: "Quicksand"),
+                ),
+              ],
+            ),
+          ),*/

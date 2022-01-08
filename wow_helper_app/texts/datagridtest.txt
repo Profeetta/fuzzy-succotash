@@ -1,0 +1,70 @@
+Datagridtest.dart
+
+import 'package:flutter/cupertino.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+import '/lib/information/overlayinfo.dart';
+
+class PatientDataSourceTwo extends DataGridSource {
+  PatientDataSourceTwo(List<> patientstwo) {
+    dataGridRows = patientstwo
+        .map<DataGridRow>(
+          (dataGridRow) => DataGridRow(
+            cells: [
+              DataGridCell<int>(columnName: "age", value: dataGridRow.age),
+              DataGridCell<int>(
+                  columnName: "cigsPerDay", value: dataGridRow.cigsPerDay),
+              DataGridCell<int>(
+                  columnName: "totChol", value: dataGridRow.totChol),
+              DataGridCell<int>(columnName: "sysBP", value: dataGridRow.sysBP),
+              DataGridCell<int>(columnName: "diaBP", value: dataGridRow.diaBP),
+              DataGridCell<int>(columnName: "BMI", value: dataGridRow.BMI),
+              DataGridCell<int>(
+                  columnName: "heartRate", value: dataGridRow.heartRate),
+              DataGridCell<int>(
+                  columnName: "glucose", value: dataGridRow.glucose),
+              DataGridCell<int>(columnName: "male", value: dataGridRow.male),
+              DataGridCell<int>(
+                  columnName: "education", value: dataGridRow.education),
+              DataGridCell<int>(
+                  columnName: "currentSmoker",
+                  value: dataGridRow.currentSmoker),
+              DataGridCell<int>(
+                  columnName: "BPMeds", value: dataGridRow.BPMeds),
+              DataGridCell<int>(
+                  columnName: "prevalentStroke",
+                  value: dataGridRow.prevalentStroke),
+              DataGridCell<int>(
+                  columnName: "prevalentHyp", value: dataGridRow.prevalentHyp),
+              DataGridCell<int>(
+                  columnName: "diabetes", value: dataGridRow.diabetes),
+              DataGridCell<int>(
+                  columnName: "tenYearCHD", value: dataGridRow.tenYearCHD),
+            ],
+          ),
+        )
+        .toList();
+  }
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      return Container(
+        alignment: (dataGridCell.columnName == "age" ||
+                dataGridCell.columnName == "tenYearCHD")
+            ? Alignment.centerRight
+            : Alignment.centerLeft,
+        padding: EdgeInsets.symmetric(horizontal: 15.0),
+        child: Text(
+          dataGridCell.value.toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      );
+    }).toList());
+  }
+}
